@@ -1,129 +1,36 @@
-# 📊 Sales Forecasting Analysis System
+# COVID-19 Data Analysis and Interactive Dashboard
 
-## 📌 Overview
+## Overview
+This project performs an exploratory data analysis (EDA) and visualization of a global COVID-19 dataset. It features data cleaning, static statistical charts to uncover global trends, correlation analyses between different case outcomes, and an interactive web dashboard built with Dash to explore the spread of the virus over time by specific countries.
 
-The **Sales Forecasting Analysis System** is a data analysis project built using Python in Google Colab. It focuses on analyzing historical sales data and predicting future sales trends using basic machine learning techniques.
+## Features
+* **Data Preprocessing:** Cleans the raw dataset by handling missing values, standardizing datetime formats, and removing duplicate records.
+* **Time Series Analysis:** Visualizes cumulative and daily new confirmed COVID-19 cases globally.
+* **Country-Level Insights:** Identifies and plots the top 10 most affected countries based on total confirmed cases, deaths, and recoveries.
+* **Interactive Dashboard:** Features a Jupyter Dash application with a country dropdown and date-range picker to dynamically filter and view cumulative cases for specific regions.
+* **Correlation Analysis:** Utilizes Plotly scatter plots and a Seaborn heatmap to examine the relationships between confirmed, active, recovered cases, and deaths.
+* **Global Distribution:** Displays the overall ratio of active, recovered, and fatal cases using interactive pie charts.
 
-This project helps businesses make better decisions by understanding sales patterns, trends, and future expectations.
+## Technologies & Libraries Used
+* **Python 3**
+* **Data Manipulation:** `pandas`, `numpy`
+* **Static Visualization:** `matplotlib.pyplot`, `seaborn`
+* **Interactive Visualization:** `plotly.express`
+* **Web Dashboard:** `jupyter_dash`, `dash` (including `dash_core_components` and `dash_html_components`)
 
----
+## Dataset
+The project utilizes a dataset named `covid_19_clean_complete.csv`. It contains the following key data points:
+* `Country/Region` and `Province/State`
+* `Lat` and `Long` (Geographical coordinates)
+* `Date` of the record
+* `Confirmed`, `Deaths`, `Recovered`, and `Active` case counts
+* `WHO Region`
 
-## 🎯 Objectives
+## Setup and Installation
 
-* Perform Exploratory Data Analysis (EDA) on sales data
-* Identify trends and patterns over time
-* Compare sales across stores and products
-* Visualize data using charts and graphs
-* Predict future sales using Linear Regression
+1. Download the Jupyter Notebook (`project_7.ipynb`) and the required dataset.
+2. Update the file path in the notebook's `pd.read_csv()` function to point to your local or cloud directory where the dataset is stored.
+3. Install the required Python libraries. You can do this by running the following command in your terminal or command prompt:
 
----
-
-## 🛠️ Tools & Technologies
-
-* Python 🐍
-* Google Colab
-* Pandas
-* NumPy
-* Matplotlib
-* Scikit-learn
-
----
-
-## 📂 Dataset
-
-The dataset should be in CSV format and include the following columns:
-
-| Column Name | Description             |
-| ----------- | ----------------------- |
-| Date        | Date of transaction     |
-| Store       | Store identifier        |
-| Item        | Product identifier      |
-| Sales       | Units sold              |
-| Region      | (Optional) Sales region |
-
----
-
-## ▶️ How to Run the Project
-
-1. Open **Google Colab**
-2. Upload the notebook file (`project_7.ipynb`)
-3. Run each cell step-by-step
-4. Upload your CSV dataset when prompted
-
----
-
-## 🔄 Project Workflow
-
-### 1. Data Collection
-
-* Upload CSV file using Colab
-* Load dataset using Pandas
-
-### 2. Data Cleaning
-
-* Convert Date column to datetime format
-* Remove duplicates
-* Handle missing values
-
-### 3. Data Analysis
-
-* Calculate total, average, minimum, and maximum sales
-* Analyze sales distribution
-
-### 4. Data Visualization
-
-* 📈 Line Chart → Sales over time
-* 📊 Bar Chart → Store-wise sales comparison
-
-### 5. Forecasting
-
-* Convert dates into numerical values
-* Train Linear Regression model
-* Predict future sales for upcoming days
-
----
-
-## 📊 Output
-
-* Cleaned dataset
-* Sales statistics
-* Visual graphs
-* Future sales predictions
-
----
-
-## 🚀 Features
-
-* Simple and easy-to-understand implementation
-* Beginner-friendly machine learning model
-* Clear data visualization
-* Runs fully on Google Colab (no installation needed)
-
----
-
-## ⚡ Future Enhancements
-
-* Advanced forecasting models (ARIMA, LSTM)
-* Interactive dashboard (Streamlit / Web App)
-* Real-time data integration
-* Export reports as PDF
-
----
-
-## 👨‍💻 Author
-
-**Maria Antony Selvam S**
-
----
-
-## 💡 Notes
-
-* Ensure the dataset format is correct before uploading
-* Date column must be properly formatted
-* Larger datasets improve prediction accuracy
-
----
-
-## ⭐ Conclusion
-
-This project demonstrates how data analysis and basic machine learning can be used to understand business trends and forecast future sales, helping organizations make smarter decisions.
+```bash
+pip install pandas numpy matplotlib seaborn plotly dash jupyter-dash
