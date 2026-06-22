@@ -10,6 +10,8 @@ This project performs an exploratory data analysis (EDA) and visualization of a 
 * **Interactive Dashboard:** Features a Jupyter Dash application with a country dropdown and date-range picker to dynamically filter and view cumulative cases for specific regions.
 * **Correlation Analysis:** Utilizes Plotly scatter plots and a Seaborn heatmap to examine the relationships between confirmed, active, recovered cases, and deaths.
 * **Global Distribution:** Displays the overall ratio of active, recovered, and fatal cases using interactive pie charts.
+  <img width="1436" height="364" alt="image" src="https://github.com/user-attachments/assets/f377ea4d-c72b-4ca2-bcf1-0776535eba68" />
+
 
 ## Technologies & Libraries Used
 * **Python 3**
